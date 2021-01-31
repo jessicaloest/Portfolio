@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, user-scalable=no">
+
+      <title>Portfolio Jessica Loest</title>
+
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="default.css">
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="logo"><a href="#"><span>Jessica</span>Loest</a></div>
+        <nav class="nav"> 
+          <input type="checkbox" id="navToggle">
+          <label for="navToggle" class="nav-icon"><i class="fa fa-bars"></i></label>
+          <ul>
+            <li><a class="sliding-middle-out" href="#aboutme">Über mich</a></li>
+            <li><a class="sliding-middle-out" href="#portfolio">Portfolio</a></li>
+            <li><a class="sliding-middle-out" href="#contact">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="aboutme">
+        <div class="about">
+          <div class="column">
+            <h1>Über mich</h1>
+            <p>Mein Name ist Jessica und  ich habe eine Ausbildung als Mediengestalterin mit dem Schwerpunkt Frontend Development und Design gemacht.</p>
+            <button><a href="./Lebenslauf.pdf" download="lebenslauf.pdf">Lebenslauf</a></button>
+          </div>
+        </div> 
+        <div class="service">
+          <h1>Was ich kann</h1>
+          <div class="row abstand">
+            <div class="bg column">
+                <h2 class="icon icon-dev">Development</h2>
+                <p>HTML, CSS, ReactJS, JavaScript</p>
+            </div>
+            <div class="bg column">
+              <h2 class="icon icon-design">UI/UX Design</h2>
+              <p>Sketch, Figma, Illustrator, Photoshop, InDesign </p>
+            </div>
+            <div class="bg column">
+              <h2 class="icon icon-video">Video Editing</h2>
+              <p>After Effects, Sony Vegas, Premiere Pro</p>
+            </div>
+          </div>
+        </div>
+      </section> 
+
+      <section id="portfolio">
+        <h1>Portfolio</h1>
+        <div class="content">
+          <div class="tab">
+            <button class="tablinks" onclick="portfolio(event, 'Design')">Design</button>
+            <button class="tablinks" onclick="portfolio(event, 'Frontend')">Frontend</button>
+            <button class="tablinks" onclick="portfolio(event, 'Video')">Video</button>
+          </div>
+          <div class="contentCard">
+            <div id="Design" class="tabcontent show">
+              <div class="card">
+                <div class="contentPage">
+                  <div class="page active">
+                    <div class="thumbnail"><img src="img/design_search.png" width="656" height="auto"/></div>
+                    <div class="info">
+                      <h2 class="subtitle">XING Webseite</h2>
+                      <h1 class="title">XING Suche</h1>
+                      <p class="description">
+                        Die XING Suche sollte mithilfe des neuen XING-Designs neu bzw. Userfreundlicher gebaut werden. 
+                      Dabei habe ich den jetzigen Aufbau der XING Suche behalten und die das alte Design in das neue Design geändert.  </p>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="thumbnail"><img src="img/design_suche_person.png" width="656" height="auto"/></div>
+                  <div class="info">
+                    <h2 class="subtitle">XING alle Plattformen</h2>
+                    <h1 class="title">XING Suche mit einer Person</h1>
+                    <p class="description">Es  sollte die Suche mir einem echten User nachgebaut werden. Dabei sollen alle verschiedenen Unterkategorien auf einer Seite angezeigt weden. "Top Suchergebnisse" und "Weitere Suchergebnisse" sollen die einzigen Kategorien  sein.</p>
+                  </div>
+                </div>
+                  <div class="page" >
+                    <div class="thumbnail"><img src="img/Design_Empty-search.png" width="656" height="auto"/></div>
+                    <div class="info">
+                      <h2 class="subtitle">XING Webseite</h2>
+                      <h1 class="title">XING Empty Search</h1>
+                      <p class="description">Es sollte ein Empty Search gebaut werden, welcher dem User mehr Inteaktion mit der Suche ermöglichen soll, wenn dieser nicht mehr weiß wonach er sucht.</p>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="thumbnail"><img src="img/desing_Icons.png" width="656" height="auto"/></div>
+                  <div class="info">
+                    <h2 class="subtitle">XING Webseite</h2>
+                    <h1 class="title">Icons</h1>
+                    <p class="description">Icons für Premium-Trophäen, die der Nutzer belohnen sollen,  wenn dieser z.B. sehr aktiv auf de Plattform ist.</p>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="thumbnail"><img src="img/design_sauerwein.png"  width="656" height="auto"/></div>
+                  <div class="info">
+                    <h2 class="subtitle">Schule</h2>
+                    <h1 class="title">Logo und Visitenkarte</h1>
+                    <p class="description">Es sollte ein  Weinlogo , Mockup und eine Visitenkate für Sauewein erstellt werden.  Das Logo sollte zeittlos, seriös, hochwertig und bodentädig wirken.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="btn_page"><button class="btn prev"><</button><button class="btn next">></button></div>
+            </div>
+          </div>
+          <div id="Frontend" class="tabcontent">
+            <div class="card">
+              <div class="contentPage">
+                <div class="page active">
+                  <div class="thumbnail"><img src="img/FE_NC-EMPTY-STATE.png" width="656" height="auto"/></div>
+                  <div class="info">
+                    <h2 class="subtitle">Notification Center</h2>
+                    <h1 class="title">Empty State</h1>
+                    <p class="description">
+                      Das Notification Center ist eine React-Applikation die in der XING Webseite lebt. Sie ist zum Teil abhängig von den Daten, die sie von der XING Webseite bekommt. 
+                      Es sollte ein Empty State für das Notifications Center zu sehen sein, wenn der Nutzer noch keine Mitteilungen hat. 
+                    Um den Empty State darzustellen habe ich eine React Komponente gebaut, die aus einem Bild, einer Headline, einem Text und einen Button besteht.</p>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="thumbnail"><img src="img/FE_Email-old.png" width="656" height="auto"/></div>
+                  <div class="info">
+                    <h2 class="subtitle">System E-Mails</h2>
+                    <h1 class="title">Neue Information</h1>
+                    <p class="description">Ich habe bei einigen E-Mails neue Information zum Beispiel bei einem anstehenden Event hinzugefügt.
+                    Der Eventveranstalter, freie Plätze und Eventort sollten bei den Events hinzugefügt werden.
+                    Vorhandene Information sollte angezeigt werden. Im Fall, dass die Information nicht vorhanden ist, wird ein Ersatz oder eines leeres Feld angezeigt.</p>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="thumbnail"><img src="img/FE_email-new-design.png" width="656" height="auto"/></div>
+                  <div class="info">
+                    <h2 class="subtitle">System E-Mails</h2>
+                    <h1 class="title">Neues Design</h1>
+                    <p class="description">Die E-Mails werden in der neuen Designsprache der XING Webseite angepasst. In den neuen E-Mails werden Komponenten zusammengefügt und mit unechten Daten gefüllt.
+                    Dabei werden schon vorhandene Komponenten verwendet oder neu erstellt. Jede neu erstellte E-Mail wird sowohl als HTML Template Variante und Textvariante erstellt.</p>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="thumbnail"><img src="img/FE_Email_Dark-Mode.png" width="656" height="auto"/></div>
+                  <div class="info">
+                    <h2 class="subtitle">System E-Mails</h2>
+                    <h1 class="title">Dark Mode</h1>
+                    <p class="description">Bei alten wie bei neuen E-Mails habe ich Dark Mode hinzugefügt. Die Farben waren bereits definiert.Nach Recherche habe ich eine Liste der Clients erstellt, die Dark Mode unterstützt. Damit man die E-Mails im Anschluss besser testen kann.</p>
+                  </div> 
+                </div>
+              </div>   
+              <div class="btn_page"><button class="btn prev"><</button><button class="btn next">></button></div>           
+            </div>
+          </div>
+    
+          <div id="Video" class="tabcontent">
+            <div class="card">
+              <div class="contentPage">
+                <div class="page active">
+                  <div class="thumbnail video">
+                    <iframe src="https://www.youtube.com/embed/Uy8QvquTgHQ?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="info">
+                    <h1 class="title">XING Logo Animation</h1>
+                    <p class="description">Es sollten mit dem neuen XING Design ein paar XING Logo Animationen erstellt werden.
+                      Diese habe ich mit After Effects erstellt. 
+                    </p>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="thumbnail video">
+                    <iframe src="https://www.youtube.com/embed/4EHz81JrEFc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="info">
+                    <h1 class="title">XING Promo Video</h1>
+                    <p class="description"> Es sollte ein Promo  Video erstellt werden, mit  Basic Informationen übe XING. Ich sollte die Musik auch aussuchen.</p>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="thumbnail video">
+                    <iframe src="https://www.youtube.com/embed/pvOtnUc3Sd8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="info">
+                    <h1 class="title">Das Gelbe M</h1>
+                    <p class="description">Ein  Schulprojekt, bei dem ich und meine Mitschüler den Ton aufnehmen mussten und dann einen Trailer für den Comic erstellen sollten.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="btn_page"><button class="btn prev" id="prev"><</button><button class="btn next" id="next">></button></div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      <section id="contact">
+        <h1>Kontaktiere mich!</h1>
+        <div class="center flex">
+          <ul class="contact_info center">
+            <li class="icon"><img class="icon" src="img/email-icon.png" alt="email icon" width="30px"> jessicaloest@gmx.de</li>
+            <li class="icon"><img class="icon" src="img/telefon.png" alt="telefon icon" width="30px"> 015732103711</li>
+          </ul>
+        </div>
+        <div class="social-icon row">
+          <a class="icon" href="https://www.xing.com/profile/Jessica_Loest/cv"><img src="img/xing.png" alt="xing" width="30px"></a>
+          <a class="icon" href="https://www.linkedin.com/in/jessica-loest-20583b182/"><img src="img/linkedin.png" alt="linkedin" width="30px"></a>
+          <a class="icon" href="https://github.com/jessicaloest"><img src="img/GitHub-Mark-64px.png" alt="github" width="30px"></a>
+        </div>
+      </section> 
+      <footer>
+      </footer>
+    </main>
+  </body>
+  <script>
+    function portfolio(evt, tab) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace("active", "");
+  }
+  document.getElementById(tab).style.display = "block";
+  evt.currentTarget.className += "active";
+}
+
+  </script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script  src="./script.js"></script>
+</html>
+
+
