@@ -27,4 +27,4 @@ var productItem = $('.page'),
       productCurrentItem = productItem.last().addClass('active');
     }
   });
-});
+
