@@ -120,6 +120,13 @@ section#portfolio{
 section#contact{
   height: 340px;
 }
+footer{
+  background-image: url(img/bgbot.png);
+  background-size: 1920px;
+  background-repeat: no-repeat;
+  height: 449px;
+  clear: both;
+}
 button{
   border-radius: 20px;
   padding: 10px 15px;
@@ -203,11 +210,11 @@ button > a { color: #FFF8F5;}
   color:#7D97BD;
   font-weight: 900;
 }
-  .about{
+.about{
   height: 600px;
   width: 30%;
   padding: 0 0 0 9%;
-}
+  }
 .service > h1{
   color: #1f2029;
 }
@@ -218,7 +225,6 @@ button > a { color: #FFF8F5;}
   position: relative;
   vertical-align: middle;
 }
-
 .bg{
   width: 60%;
   display: flex;
@@ -312,10 +318,10 @@ p.link a:hover {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 16px 18px;
   font-weight: 800;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 1.1rem;
   background-color: #7D97BD;
   border-radius: 30px;
   margin: 0 20px;
@@ -417,19 +423,11 @@ h1.title {justify-content: left;}
 button.btn{ background-color: transparent;font-weight: 800;font-size: 1.5rem;}
 
 iframe{width: 700px; height: 450px;}
-footer{
-  background-image: url(img/bgbot.png);
-  background-size: 1920px;
-  background-repeat: no-repeat;
-  height: 449px;
-  clear: both;
-}
 
-@media screen and (max-width: 840px) { 
-  .tab-content{max-height: 600px;}
-}
 
 @media screen and (max-width: 1080px) {
+  main{background-image: url(img/bgtop_tablet.png);background-size:1080px;}
+  footer{background-image: url(img/bgbot_tablet.png);background-size: 1080px;height: 314px;}
   h1{font-size: 1.7rem;}
   h2{font-size: 1.3rem;}
   .nav {
@@ -448,7 +446,6 @@ footer{
     transition: max-height 0.3s;
     z-index: -2;
   }
-
   .nav ul li {
     text-align: left;
     width: 100%;
@@ -497,11 +494,10 @@ footer{
     padding: 5%  8%;
   }
   .bg p{padding-bottom: 0;}
-  section#portfolio{padding:0; height: 1000px;}
-  .page{flex-direction: column !important;height: 100%;}
-  .contentPage{height: 900px !important;}
+  .page{flex-direction: column !important;max-height:600px;height: 100%;}
+  .contentPage{height: 1200px !important;}
   .thumbnail{
-    width: 100%;
+    width: 80%;
     align-self: flex-start !important;
   }
   .info{
@@ -509,7 +505,7 @@ footer{
     text-align: left;
   }
   .card{
-    max-height: 750px;
+    max-height: 1000px;
     height: 100% !important;
     padding: 8% 8%  !important;
   }
@@ -517,18 +513,24 @@ footer{
   .center{ margin: 0 8%;}
   .social-icon.row {flex-direction: row;}
   .about{ margin-top:60px;height: 500px;}
-  iframe{width: 100%; align-self: flex-start !important;height: 400px;}
   .description{font-size: 0.9rem;line-height: 1rem;}
-  .service{ padding-top: 220px;}
+  .service{ padding-top: 0;}
   .contact_info li {font-size: 1.2rem;}
   .btn_page {justify-content: flex-start;}
+  section#aboutme{ height: 1100px; padding-top: 0;}
+  section#portfolio{padding:0; height: 1000px;}
+  iframe{width: 100%; align-self: flex-start !important;height: 400px;}
 }
 @media screen and (max-width: 600px) { 
+  main{background-image: url(img/bgtop_mobile.png);background-size:600px;}
+  footer{background-image: url(img/bgbot_mobile.png);background-size: 600px;height: 400px;}
   body,p{font-size: 1rem;}
   h1{font-size: 1.5rem;}
   h2{font-size: 1.1rem;}
-  .service{ padding-top: 200px;}
-  section#aboutme{padding: 0; height: 1200px;}
+  .service{ padding-top: 0;}
+  section#aboutme{padding: 0; height: 1100px;}
+  section#portfolio{height: 900px;}
   .card{max-height: 600px;}
   .contentPage{height: 500px !important;}
+  iframe{width: 100%; align-self: flex-start !important;height: 300px;}
 }

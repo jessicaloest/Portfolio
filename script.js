@@ -1,7 +1,7 @@
 var productItem = $('.page'),
     productCurrentItem = productItem.filter('.active');
 
-  $('#next').on('click', function(e) {
+  $('.next').on('click', function(e) {
 
     var nextItem = productCurrentItem.next();
 
@@ -15,7 +15,7 @@ var productItem = $('.page'),
     }
   });
 
-  $('#prev').on('click', function(e) {
+  $('.prev').on('click', function(e) {
 
     var prevItem = productCurrentItem.prev();
 
