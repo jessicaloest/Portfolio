@@ -134,6 +134,7 @@ button{
   border: 0;
   font-weight: 800;
   font-size: 1.2rem;
+  outline:none;
   margin-top: 20px;
   font-family: 'Montserrat', sans-serif;
 }
@@ -275,7 +276,7 @@ ul.contact_info  {
 .contact_info li{
   font-weight: 500;
   font-size:1.3rem;
-  padding: 10px 0;
+  padding: 0 0 10px 0;
   vertical-align: middle;
 }
 .contact_info img{
@@ -293,14 +294,11 @@ p.link a:hover {
 }
 
 .btn {
-  border-radius: 2px;
   padding: 8px 12px;
   color: #FFF8F5;
-  font-size: 14px;
-  font-weight: 500;
+  display: flex;
   text-decoration: none;
   text-transform: uppercase;
-  transition: 0.5s ease;
 }
 .tab {
   overflow: hidden;
@@ -355,7 +353,7 @@ p.link a:hover {
   box-sizing: border-box;
   padding: 50px;
 }
-.contentCard{display: flex; justify-content: center;}
+.contentCard{display: flex; justify-content: center; }
 .contentPage {
   display: flex;
   flex-direction: row;
@@ -414,21 +412,28 @@ p.link a:hover {
 }
 h1.title {justify-content: left;}
 
-.description {font-size: 1rem;}
+.description {font-size: 1.1rem;}
 
 .btn_page{
   justify-content: flex-end;
   display: flex;
+  height: auto;
 }
-button.btn{ background-color: transparent;font-weight: 800;font-size: 1.5rem;}
+button.btn{ 
+  background-color: transparent;
+  font-weight: 800;
+  font-size: 1.5rem;
+  padding-top: 0;
+  margin-top: 0;
+}
 
-iframe{width: 700px; height: 450px;}
+iframe{width: 650px; height: 450px;}
 
 
 @media screen and (max-width: 1080px) {
   main{background-image: url(img/bgtop_tablet.png);background-size:1080px;}
   footer{background-image: url(img/bgbot_tablet.png);background-size: 1080px;height: 314px;}
-  h1{font-size: 1.7rem;}
+  h1{font-size: 1.7rem;line-height: 30px; margin: 0 0 20px 0;}
   h2{font-size: 1.3rem;}
   .nav {
     width: 100%;
@@ -471,27 +476,21 @@ iframe{width: 700px; height: 450px;}
   .nav ul li a:hover {color: #FFF8F5;}
   .fa-bars{color: #FFF8F5;}
   li {color: #FFF8F5;}
-  .logo{
-    margin-left: 8% !important;
-  }
-  .logo a{
-    font-size:1.5rem;
-  }
-  h2.icon-video:before, h2.icon-design:before, h2.icon-dev:before{
-    display: none;
-  }
-  .sliding-middle-out:hover:after{
-    display: none;
-  }
+  .logo{margin-left: 8% !important;}
+  .logo a{font-size:1.5rem;}
+  h2.icon-video:before, h2.icon-design:before, h2.icon-dev:before{display: none;}
+  .sliding-middle-out:hover:after{display: none;}
   .row{
     flex-direction: column;
-    margin-left: 8%;
+    margin: 0px 8%;
+    height: 500px;
   }
   .about{width: 60%;}
   .bg{
     width: 88%;
     margin-bottom: 20px;
-    padding: 5%  8%;
+    padding: 25px;
+    height: 230px;
   }
   .bg p{padding-bottom: 0;}
   .page{flex-direction: column !important;max-height:600px;height: 100%;}
@@ -507,30 +506,38 @@ iframe{width: 700px; height: 450px;}
   .card{
     max-height: 1000px;
     height: 100% !important;
-    padding: 8% 8%  !important;
   }
   .contact_info li {color: #171C23;}
-  .center{ margin: 0 8%;}
-  .social-icon.row {flex-direction: row;}
+  .social-icon.row {flex-direction: row; height: 100px;}
   .about{ margin-top:60px;height: 500px;}
-  .description{font-size: 0.9rem;line-height: 1rem;}
+  .description{font-size: 0.9rem;line-height: 1.1rem;}
   .service{ padding-top: 0;}
   .contact_info li {font-size: 1.2rem;}
-  .btn_page {justify-content: flex-start;}
   section#aboutme{ height: 1100px; padding-top: 0;}
   section#portfolio{padding:0; height: 1000px;}
   iframe{width: 100%; align-self: flex-start !important;height: 400px;}
+  .tabcontent{max-height: 780px;}
+  .tabcontent > .contentDesign{max-height: 680px;}
+  .tabcontent > .contentFrontend{max-height: 700px;}
+  .tabcontent > .contentVideo{max-height: 700px;}
 }
 @media screen and (max-width: 600px) { 
   main{background-image: url(img/bgtop_mobile.png);background-size:600px;}
   footer{background-image: url(img/bgbot_mobile.png);background-size: 600px;height: 400px;}
   body,p{font-size: 1rem;}
-  h1{font-size: 1.5rem;}
-  h2{font-size: 1.1rem;}
+  h1{font-size: 1.5rem; line-height: 40px; padding: 0;}
+  h1.title{font-size: 1.3rem; margin: 0;}
+  h2{font-size: 1.2rem;}
+  h2.subtitle{font-size: 1rem;}
   .service{ padding-top: 0;}
   section#aboutme{padding: 0; height: 1100px;}
-  section#portfolio{height: 900px;}
-  .card{max-height: 600px;}
-  .contentPage{height: 500px !important;}
-  iframe{width: 100%; align-self: flex-start !important;height: 300px;}
+  section#portfolio{height: auto;}
+  iframe{width: 100%; align-self: flex-start !important;height: 200px;}
+  .bg .column{padding: 25px; height: 200px;}
+  #contact h1{padding: 0;}
+  h1#portfolio{padding: 0;}
+  .tabcontent{max-height: 620px;}
+  .tabcontent > .contentDesign{max-height: 550px;}
+  .tabcontent > .contentFrontend{max-height: 580px;}
+  .tabcontent > .contentVideo{max-height: 500px;}
 }
