@@ -1,7 +1,18 @@
+// Design is the starting active page
+let SlidesArray = $('#contentPageDesign').children();
+
+// Always starts with the the first slide of the current selected tab
+let currentPage = SlidesArray.first();
+
+// Hide prev arrow button
+$('.prev').hide()
+
 function portfolio(evt, tab) {
   let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   tablinks = document.getElementsByClassName("tablinks");
+  SlidesArray = $(`#contentPage${tab}`).children();
+  currentPage = SlidesArray.first();
 
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -15,55 +26,37 @@ function portfolio(evt, tab) {
   evt.target.className += " active";
 };
 
-// const refs = {};
-// $('.tabcontent').each((i,el) => {
-//   console.log('el is:', el.id)
-//   let id = el.id
-//   const grandKidsAsJqueryObjs = $(`#${id}`).find('.contentPage').children();
-//   refs[id] = grandKidsAsJqueryObjs;
-//   //refs[id] = $(`#${id}`).find('.contentPage').children();
-//   //console.log('GRAND KIDS:', $(`#${id}`).find('.contentPage').children())
-// });
 
-// refs[currentTabId];
-
-// let activeTab = '#Design';
-// ['#Design', '#Frontend', '#Video'].forEach((id) => {
-//   console.log('HI', id, $(id));
-//   $(id).on('click', () => {
-//     console.log('Clicked on', id)
-//     activeTab = id;
-//   })
-// });
-
-
-// refs[activeTab]; // will give you the grandchildren to loop through.
-
-
-//var tabs = $('.tabcontent')
-
-const showPage = $('.page')
-let currentPage = showPage.filter('.active');
 
 $('.next').on('click', function(e) {
   const nextPage = currentPage.next()
 
   currentPage.removeClass('active');
   currentPage = nextPage.addClass('active');
-  if (nextPage.length <= 1) {
+
+  // Not yet the last slide
+  if (SlidesArray.last().is(nextPage)) {
     $('.next').hide()
+    $('.prev').show();
+  } else {
+    $('.next').show()
+    $('.prev').show();
   }
 });
 
 $('.prev').on('click', function(e) {
-  const prevPage = currentPage.prev();
+  // Stays in the first element
+  const prevPage = currentPage.prev()
 
   currentPage.removeClass('active');
+  currentPage = prevPage.addClass('active');
 
-  if (prevPage.length) {
+  // Not yet the first slide
+  if (SlidesArray.first().is(currentPage)) {
+    $('.prev').hide()
+  }
+  else {
     $('.next').show()
-    currentPage = prevPage.addClass('active');
-  } else {
-    currentPage = showPage.last().addClass('active');
+    $('.prev').show();
   }
 });
