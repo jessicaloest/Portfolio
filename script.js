@@ -1,15 +1,18 @@
 function portfolio(evt, tab) {
-  var i, tabcontent, tablinks;
+  let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
+  tablinks = document.getElementsByClassName("tablinks");
+
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tablinks");
+
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
+
   document.getElementById(tab).style.display = "block";
-  evt.currentTarget.className += "active";
+  evt.target.className += " active";
 };
 
 // const refs = {};
@@ -37,37 +40,30 @@ function portfolio(evt, tab) {
 // refs[activeTab]; // will give you the grandchildren to loop through.
 
 
-var tabs = $('.tabcontent')
+//var tabs = $('.tabcontent')
 
-var showPage = $('.page'),
-    currentPage = showPage.filter('.active');
+const showPage = $('.page')
+let currentPage = showPage.filter('.active');
 
-  $('.next').on('click', function(e) {
-    // $('#contentPageDesign').children()
+$('.next').on('click', function(e) {
+  const nextPage = currentPage.next()
 
-    var nextPage = currentPage.next()
+  currentPage.removeClass('active');
+  currentPage = nextPage.addClass('active');
+  if (nextPage.length <= 1) {
+    $('.next').hide()
+  }
+});
 
-    if (nextPage.length) {
-      currentPage.removeClass('active');
-      currentPage = nextPage.addClass('active');
-      
-    } else {
-      $('.next').hide()
-      // currentPage = showPage.first().addClass('active');
-    }
-  });
+$('.prev').on('click', function(e) {
+  const prevPage = currentPage.prev();
 
-  $('.prev').on('click', function(e) {
+  currentPage.removeClass('active');
 
-    var prevPage = currentPage.prev();
-
-    currentPage.removeClass('active');
-
-    if (prevPage.length) {
-      $('.next').show()
-      currentPage = prevPage.addClass('active');
-    } else {
-      currentPage = showPage.last().addClass('active');
-      
-    }
-  });
+  if (prevPage.length) {
+    $('.next').show()
+    currentPage = prevPage.addClass('active');
+  } else {
+    currentPage = showPage.last().addClass('active');
+  }
+});
