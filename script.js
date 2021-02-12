@@ -6,6 +6,7 @@ let currentPage = SlidesArray.first();
 
 // Hide prev arrow button
 $('.prev').hide()
+$('.next').show()
 
 function portfolio(evt, tab) {
   let i, tabcontent, tablinks;
@@ -13,6 +14,8 @@ function portfolio(evt, tab) {
   tablinks = document.getElementsByClassName("tablinks");
   SlidesArray = $(`#contentPage${tab}`).children();
   currentPage = SlidesArray.first();
+  $('.prev').hide()
+  $('.next').show()
 
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
